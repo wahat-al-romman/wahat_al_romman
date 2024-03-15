@@ -16,20 +16,22 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import './navbar.css'
 const Navbar = ({ openMenu, menuOpen, closeMenu }) => {
   const { toggle, darkMode } = useContext(DarkModeContext);
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [resultOpen, setResultOpen] = useState();
+  // const [dialogOpen, setDialogOpen] = useState(false);
+  // const [resultOpen, setResultOpen] = useState();
 
-  const [searchText, setSearchText] = useState("");
-  const [err, setErr] = useState(null);
-  const [error, setError] = useState(null);
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [searchText, setSearchText] = useState("");
+  // const [err, setErr] = useState(null);
+  // const [error, setError] = useState(null);
+  // const [data, setData] = useState(null);
+  // const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
-  const gotoRequests = () => {
-    navigate("/requests");
-    window.location.reload();
-  }
+  console.log(navigate);
+  // const gotoRequests = () => {
+  //   navigate("/requests");
+  //   window.location.reload();
+  // }
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -37,41 +39,41 @@ const Navbar = ({ openMenu, menuOpen, closeMenu }) => {
     });
   };
 
-  const handleChange = async (e) => {
-    if (e.target.value) {
-      setSearchText(e.target.value);
+  // const handleChange = async (e) => {
+  //   if (e.target.value) {
+  //     setSearchText(e.target.value);
 
-    }
-    else {
-      setData(null);
-      setSearchText(undefined);
-    }
-    setLoading(false);
-  };
+  //   }
+  //   else {
+  //     setData(null);
+  //     setSearchText(undefined);
+  //   }
+  //   setLoading(false);
+  // };
 
   const searchRef = useRef(null);
-  const [width, setWidth] = useState(0);
-  const [left, setLeft] = useState(0);
+  // const [width, setWidth] = useState(0);
+  // const [left, setLeft] = useState(0);
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
     const refDiv = document.getElementById('refDiv');
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 2000);
 
     if (refDiv) {
-      const rect = refDiv.getBoundingClientRect();
-      setWidth(rect.width);
-      setLeft(rect.left);
+      // const rect = refDiv.getBoundingClientRect();
+      // setWidth(rect.width);
+      // setLeft(rect.left);
     }
 
     setScrolling(false)
 
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setResultOpen(false);
+        // setResultOpen(false);
       }
     };
     const handleScroll = () => {
