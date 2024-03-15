@@ -1,10 +1,10 @@
 import Home from "./pages/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import SideBar from "./components/sidebar/SideBar";
-import Loader from './components/loader/Loader';
+// import Loader from './components/loader/Loader';
 import "./style.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import NotFound from "./pages/notfound/NotFound";
 import Landing from "./components/landing/Landing";
