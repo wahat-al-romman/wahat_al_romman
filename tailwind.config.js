@@ -38,7 +38,8 @@ export const theme = {
       nm: "896px",
     },
     animation: {
-      sizeup:"sizeup 2s linear forwards",
+      sizeup:"sizeup 5s linear forwards",
+      disappear:"disappear 5s linear forwards",
       falldown5: "falldown 0.5s ease-out forwards",
       fallup5: "fallup 0.5s ease-in forwards",
       riseup5: "riseup 0.5s ease-out forwards",
@@ -60,12 +61,15 @@ export const theme = {
     },
     keyframes: {
       sizeup: {
-        '0%': { transform: 'scale(1)' },
-        '20%': { transform: 'scale(1.1)' },
-        '40%': { transform: 'scale(1.2)' },
-        '60%': { transform: 'scale(1.4)' },
-        '80%': { transform: 'scale(1.8)' },
-        '100%': { transform: 'scale(2)' },
+        '0%,25%': { color:"white" },
+        '30%': { fontSize: '128px',color:"transparent" },
+        '95%': {fontSize: '1100px',fontWeight:"1000"},
+        '100%': {fontSize: '1100px',fontWeight:"1000",display:"hidden"},
+      },
+      disappear: {
+        "0%": { opacity:"1" }, 
+        "90%": { display: "flex", opacity:"1" },  
+        "100%": { display: "hidden", opacity:"0" },  
       },
       falldown: {
         "0%": { transform: "translateY(-1000%)", opacity:"0" }, 
