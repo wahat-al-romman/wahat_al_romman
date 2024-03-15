@@ -22,8 +22,8 @@ const Landing = () => {
     console.log(animate);
 
     return (
-        <div className={`landing fixed flex items-center justify-center z-999 w-screen h-screen bg-zinc-900 text-center ${animate ? 'animate-disappear':''}`}>
-            <span className={`font-anton absolute whitespace-nowrap text-9xl max-md:scale-50 bg-food1 text-transparent bg-clip-text bg-fixed bg-center bg-cover ${animate ? 'animate-sizeup' : ''}`}>WAHAT AL ROMMAN</span>
+        <div className={`landing fixed flex items-center justify-center z-999 w-screen h-screen bg-zinc-900 text-center bg-center ${animate ? 'animate-disappear':''}`}>
+            <span className={`font-anton absolute md:whitespace-nowrap text-9xl max-md:scale-50 bg-food1 text-transparent bg-clip-text bg-fixed bg-center bg-cover ${animate ? 'max-md:animate-trans md:animate-sizeup' : ''}`}>WAHAT AL ROMMAN</span>
         </div>
     );
 };

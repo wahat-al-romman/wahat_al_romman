@@ -39,6 +39,7 @@ export const theme = {
     },
     animation: {
       sizeup:"sizeup 5s linear forwards",
+      trans:"trans 5s linear forwards",
       disappear:"disappear 5s linear forwards",
       falldown5: "falldown 0.5s ease-out forwards",
       fallup5: "fallup 0.5s ease-in forwards",
@@ -63,12 +64,18 @@ export const theme = {
       sizeup: {
         '0%,25%': { color:"white" },
         '30%': { fontSize: '128px',color:"transparent" },
-        '95%': {fontSize: '1100px',fontWeight:"1000"},
-        '100%': {fontSize: '1100px',fontWeight:"1000"},
+        '90%': {fontSize: '2800px',fontWeight:"1000"},
+        '100%': {fontSize: '2800px',fontWeight:"1000"},
+      },
+      trans: {
+        '0%,25%': { color:"white" },
+        '90%': { color:'transparent'},
+        '100%': { color:'transparent'},
       },
       disappear: {
-        "0%": { opacity:"1" }, 
-        "90%": { display: "flex", opacity:"1" },  
+        "0%": { opacity:"1",background:'rgb(24 24 27)' }, 
+        "90%": { opacity:"1", background:"url('../public/foods/food-1.jpg') center cover" },  
+        "99%": {  opacity:"0" , background:"url('../public/foods/food-1.jpg') center cover"},  
         "100%": { display: "none", opacity:"0" },  
       },
       falldown: {
