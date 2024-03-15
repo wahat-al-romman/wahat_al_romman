@@ -64,12 +64,12 @@ export const theme = {
         '0%,25%': { color:"white" },
         '30%': { fontSize: '128px',color:"transparent" },
         '95%': {fontSize: '1100px',fontWeight:"1000"},
-        '100%': {fontSize: '1100px',fontWeight:"1000",display:"hidden"},
+        '100%': {fontSize: '1100px',fontWeight:"1000"},
       },
       disappear: {
         "0%": { opacity:"1" }, 
         "90%": { display: "flex", opacity:"1" },  
-        "100%": { display: "hidden", opacity:"0" },  
+        "100%": { display: "none", opacity:"0" },  
       },
       falldown: {
         "0%": { transform: "translateY(-1000%)", opacity:"0" }, 
