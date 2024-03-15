@@ -1,7 +1,7 @@
 
 import { LightMode } from "@mui/icons-material";
 import NightMode from "@mui/icons-material/DarkModeRounded";
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 
